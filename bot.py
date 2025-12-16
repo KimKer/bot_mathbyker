@@ -7,9 +7,11 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 import os
+from telegram.ext import Application
 
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TOKEN = os.environ.get("BOT_TOKEN")
 
+app = Application.builder().token(TOKEN).build()
 
 
 # ------------------ GENERADORES DE EJERCICIOS ------------------
@@ -107,4 +109,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
