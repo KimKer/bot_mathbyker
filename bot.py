@@ -7,7 +7,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 import os
-TOKEN = os.environ.get("8477445132:AAHXuRHbD-5DHTQgEvAXY7HA6NVGtDo_hyI")
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+
 
 
 # ------------------ GENERADORES DE EJERCICIOS ------------------
@@ -105,3 +107,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
